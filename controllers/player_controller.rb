@@ -1,11 +1,10 @@
-
+require_relative '../config/environment.rb'
 class PlayerController
 
   def self.create_users
     2.times {prompt_user}
   end
   
-  # view
   def self.prompt_user
     puts "Player #{Player.count+1}, please enter your name."
     name = gets.chomp
@@ -41,18 +40,7 @@ class PlayerController
     end
   end
 
-
   def self.play_matching(player)
     2.times {player.find_matching}
   end
-
-
 end
-
-
-
-  # def self.string_of_cards(array_of_cards)
-  #   array_of_cards.collect do |card|
-  #     "#{card.number} of #{card.suit}s"
-  #   end.join(" - ")
-  # end

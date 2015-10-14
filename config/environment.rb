@@ -1,3 +1,4 @@
+require_relative '../lib/concerns/persistable.rb'
 require_relative '../views/CLI/fish.rb'
 require_relative '../views/CLI/help_menu.rb'
 require_relative '../views/CLI/greeting.rb'
@@ -18,7 +19,4 @@ require_relative '../controllers/cli_controller.rb'
 require_relative '../controllers/card_controller.rb'
 require_relative '../controllers/game_controller.rb'
 
-
-
-
-
+DB = {:conn => SQLite3::Database.new("db/go_fish.db")}
